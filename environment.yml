@@ -1,0 +1,33 @@
+name: ParT_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  # Python recomendado por Weaver (evita roces con 3.12)
+  - python=3.10
+  # PyTorch + CUDA 12.4 (también puede a 12.1 si se prefieres)
+  - pytorch=2.4.* 
+  - torchvision=0.19.*
+  - torchaudio=2.4.*
+  - pytorch-cuda=12.4           # o 12.1 (ambos compatibles con driver 12.8)
+  - pip
+  - numpy
+  - scipy
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - pyyaml
+  - tqdm
+  - pyarrow
+  - tables                      # HDF5 (opcional, algunos flujos lo usan)
+  - xz
+  - lz4
+  - xxhash
+  - pip:
+      - weaver-core>=0.4
+      - uproot
+      - awkward
+      - onnxruntime-gpu
+      - tensorboard
